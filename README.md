@@ -1,17 +1,9 @@
-TODDY CAT — FINAL CINEMATIC WEBSITE
+# Toddy Cat — Uniform Final Website
 
-This package is the final pre-launch cinematic website build.
+This version uses one consistent visual system across the entire site: dark jungle/night atmosphere, gold Toddy accents, glass panels, consistent borders, typography and spacing, with continuous scrolling.
 
-IMPORTANT:
-- The three approved image assets are preserved exactly from the approved V4 package.
-- Do not replace or rename the image files.
-- Upload all files in this folder to the GitHub Pages repository root.
-- Real contract, DexScreener pair, price, liquidity, volume and social URLs should only be added after they actually exist.
-
-Files:
-index.html
-style.css
-script.js
-toddy-cat.png
-toddy-jungle.png
-toddy-night-shift.png
+Important:
+- The three approved images are preserved byte-for-byte: `toddy-cat.png`, `toddy-jungle.png`, `toddy-night-shift.png`.
+- Images are constrained inside responsive containers so they do not run outside the page viewport.
+- No real contract, market data, DexScreener pair, X account or Telegram link is invented.
+- Keep the existing `CNAME` file in the GitHub repository when uploading these files.
