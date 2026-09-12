@@ -1,9 +1,17 @@
-document.getElementById("copyBtn").addEventListener("click", async () => {
-  const value = document.getElementById("contract").textContent.trim();
-  if (value.includes("COMING SOON")) return;
-  try {
-    await navigator.clipboard.writeText(value);
-    document.getElementById("copyBtn").textContent = "COPIED!";
-    setTimeout(() => document.getElementById("copyBtn").textContent = "COPY", 1500);
-  } catch(e) {}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
 });

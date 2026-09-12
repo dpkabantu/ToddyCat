@@ -4,119 +4,170 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Toddy Cat — The Original Night Trader. A community meme token on Robinhood Chain.">
+  <meta name="theme-color" content="#080b09">
   <title>Toddy Cat — The Original Night Trader</title>
+  <link rel="icon" href="toddy-cat.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="grain"></div>
+
   <header class="nav">
-    <a class="brand" href="#home">TODDY<span>CAT</span></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#tokenomics">Tokenomics</a>
+    <a class="brand" href="#home" aria-label="Toddy Cat home">
+      <span class="brand-mark">🐾</span>
+      <span>TODDY<span class="gold">CAT</span></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#story">Story</a>
+      <a href="#token">Token</a>
       <a href="#roadmap">Roadmap</a>
       <a href="#community">Community</a>
     </nav>
-    <a class="btn btn-small" href="#buy">BUY $TODDY</a>
+    <a class="btn btn-small" href="#token">ENTER THE NIGHT</a>
   </header>
 
   <main id="home">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">🐾 ROBINHOOD CHAIN • MEME TOKEN</p>
-        <h1>TODDY CAT</h1>
-        <h2>THE ORIGINAL<br><span>NIGHT TRADER.</span></h2>
-        <p class="lead">Not your ordinary cat. Toddy comes alive at night — watching the market, making memes, and building a community.</p>
-        <div class="actions">
-          <a class="btn" href="#buy">BUY $TODDY</a>
-          <a class="btn btn-ghost" href="#chart">VIEW DEXSCREENER</a>
+    <section class="hero section-screen">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span>●</span> ROBINHOOD CHAIN · MEME TOKEN</div>
+        <h1>TODDY<br><span>CAT</span></h1>
+        <p class="tagline">THE ORIGINAL <strong>NIGHT TRADER.</strong></p>
+        <p class="lead">When the market sleeps, Toddy is still watching. A wild civet-inspired meme, built for the night shift.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#token">DISCOVER $TODDY <span>↘</span></a>
+          <a class="btn btn-ghost" href="#story">MEET TODDY</a>
         </div>
-        <div class="contract-card">
-          <div>
-            <small>OFFICIAL CONTRACT</small>
-            <code id="contract">COMING SOON — LAUNCH FIRST</code>
-          </div>
-          <button id="copyBtn" disabled>COPY</button>
+        <div class="trust-row">
+          <span>🌙 NOCTURNAL</span>
+          <span>🐾 WILD</span>
+          <span>⚡ COMMUNITY</span>
         </div>
       </div>
-      <div class="hero-art">
+
+      <div class="hero-art reveal delay-1">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
         <div class="moon"></div>
+        <div class="hero-ring"></div>
         <img src="toddy-cat.png" alt="Toddy Cat — The Original Night Trader">
+        <div class="floating-chip chip-top">THE NIGHT SHIFT</div>
+        <div class="floating-chip chip-bottom">WATCH · MEME · BUILD</div>
       </div>
+
+      <a class="scroll-cue" href="#story">SCROLL TO ENTER THE JUNGLE <span>↓</span></a>
     </section>
 
-    <section class="stats" id="chart">
-      <div><small>PRICE</small><strong>COMING SOON</strong></div>
-      <div><small>MARKET CAP</small><strong>COMING SOON</strong></div>
-      <div><small>LIQUIDITY</small><strong>COMING SOON</strong></div>
-      <div><small>24H VOLUME</small><strong>COMING SOON</strong></div>
-    </section>
-
-    <section class="section two-col" id="about">
-      <div>
+    <section class="story section-screen" id="story">
+      <div class="section-intro reveal">
         <p class="eyebrow">01 — MEET TODDY</p>
         <h2>NOT YOUR<br><span>ORDINARY CAT.</span></h2>
       </div>
-      <div class="text">
-        <p>Toddy Cat is the traditional name associated with the Asian palm civet — a nocturnal, elusive and distinctive wild animal.</p>
-        <p>While the world sleeps, Toddy watches. Now Toddy has entered the crypto jungle.</p>
-        <div class="pill-row"><span>🌙 NOCTURNAL</span><span>🌴 WILD</span><span>🐾 COMMUNITY</span></div>
+      <div class="story-grid">
+        <div class="story-card story-image reveal">
+          <img src="toddy-cat.png" alt="Toddy Cat in the night jungle">
+          <div class="image-caption">THE ORIGINAL NIGHT TRADER</div>
+        </div>
+        <div class="story-copy reveal delay-1">
+          <p class="kicker">THE ANIMAL BEHIND THE MEME</p>
+          <p>Toddy Cat is a traditional name associated with the Asian palm civet — a nocturnal, elusive wild animal.</p>
+          <p>We took that identity into the crypto jungle and turned it into a character: curious, awake, a little mischievous, and always on the night shift.</p>
+          <div class="trait-grid">
+            <div><b>01</b><strong>NOCTURNAL</strong><span>Most active when the world goes quiet.</span></div>
+            <div><b>02</b><strong>WILD</strong><span>Rare energy. Untamed personality.</span></div>
+            <div><b>03</b><strong>MEMEABLE</strong><span>Built to become a community character.</span></div>
+            <div><b>04</b><strong>COMMUNITY</strong><span>The jungle gets louder together.</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="tokenomics">
-      <p class="eyebrow">02 — TOKEN</p>
-      <h2>$TODDY <span>AT A GLANCE</span></h2>
-      <div class="cards">
-        <article><small>NAME</small><strong>Toddy Cat</strong></article>
-        <article><small>TICKER</small><strong>TODDY</strong></article>
-        <article><small>CHAIN</small><strong>Robinhood Chain</strong></article>
-        <article><small>QUOTE</small><strong>WETH</strong></article>
-        <article><small>SUPPLY</small><strong>1,000,000,000</strong></article>
-        <article><small>STATUS</small><strong>LAUNCHING SOON</strong></article>
+    <section class="token section-screen" id="token">
+      <div class="section-intro centered reveal">
+        <p class="eyebrow">02 — $TODDY</p>
+        <h2>WELCOME TO THE<br><span>NIGHT SHIFT.</span></h2>
+        <p class="section-lead">Pre-launch details are shown as placeholders. Live market data will appear here after the token has a live trading pair.</p>
       </div>
-      <p class="note">Token details shown here are placeholders until the live pons launch configuration is confirmed. Always verify the official contract address before trading.</p>
-    </section>
 
-    <section class="section" id="buy">
-      <p class="eyebrow">03 — HOW TO BUY</p>
-      <h2>JOIN THE <span>NIGHT SHIFT.</span></h2>
-      <div class="steps">
-        <div><b>01</b><h3>GET ETH</h3><p>Have ETH available on Robinhood Chain.</p></div>
-        <div><b>02</b><h3>CONNECT</h3><p>Connect your wallet to the official pons launch/trading page.</p></div>
-        <div><b>03</b><h3>VERIFY</h3><p>Check the official TODDY contract address before trading.</p></div>
-        <div><b>04</b><h3>TRADE</h3><p>Trade $TODDY through the official route after launch.</p></div>
+      <div class="live-strip reveal">
+        <div><small>PRICE</small><strong>COMING SOON</strong></div>
+        <div><small>MARKET CAP</small><strong>COMING SOON</strong></div>
+        <div><small>LIQUIDITY</small><strong>COMING SOON</strong></div>
+        <div><small>24H VOLUME</small><strong>COMING SOON</strong></div>
       </div>
-      <div class="link-row">
-        <a class="btn" href="#" aria-disabled="true">PONS — COMING SOON</a>
-        <a class="btn btn-ghost" href="#" aria-disabled="true">DEXSCREENER — COMING SOON</a>
-      </div>
-    </section>
 
-    <section class="section" id="roadmap">
-      <p class="eyebrow">04 — ROADMAP</p>
-      <h2>THE NIGHT <span>BEGINS.</span></h2>
-      <div class="timeline">
-        <article><b>PHASE 01</b><h3>THE AWAKENING</h3><p>Brand • Website • X • Telegram • Community</p></article>
-        <article><b>PHASE 02</b><h3>THE LAUNCH</h3><p>Fair launch • Contract verification • DEX visibility</p></article>
-        <article><b>PHASE 03</b><h3>THE NIGHT SHIFT</h3><p>Memes • Community creators • Collaborations</p></article>
-        <article><b>PHASE 04</b><h3>THE JUNGLE</h3><p>Grow the Toddy community and explore new opportunities.</p></article>
+      <div class="token-grid">
+        <article class="token-panel reveal">
+          <div class="panel-head"><span>PROJECT DATA</span><i>01</i></div>
+          <div class="data-row"><span>NAME</span><strong>Toddy Cat</strong></div>
+          <div class="data-row"><span>TICKER</span><strong>$TODDY</strong></div>
+          <div class="data-row"><span>CHAIN</span><strong>Robinhood Chain</strong></div>
+          <div class="data-row"><span>QUOTE</span><strong>WETH</strong></div>
+          <div class="data-row"><span>SUPPLY</span><strong>1,000,000,000*</strong></div>
+          <p class="micro">*Placeholder until the live launch configuration is confirmed.</p>
+        </article>
+
+        <article class="contract-panel reveal delay-1">
+          <div class="panel-head"><span>OFFICIAL CONTRACT</span><i>02</i></div>
+          <div class="contract">COMING SOON</div>
+          <p>Always verify the official contract address before trading.</p>
+          <button class="btn btn-disabled" disabled>COPY CONTRACT</button>
+        </article>
       </div>
     </section>
 
-    <section class="community" id="community">
-      <p class="eyebrow">05 — COMMUNITY</p>
-      <h2>THE MARKET NEVER SLEEPS.<br><span>NEITHER DOES TODDY.</span></h2>
-      <div class="actions">
-        <a class="btn" href="#" aria-disabled="true">X — COMING SOON</a>
-        <a class="btn btn-ghost" href="#" aria-disabled="true">TELEGRAM — COMING SOON</a>
+    <section class="roadmap section-screen" id="roadmap">
+      <div class="section-intro reveal">
+        <p class="eyebrow">03 — ROADMAP</p>
+        <h2>THE NIGHT<br><span>BEGINS.</span></h2>
       </div>
+      <div class="roadmap-line">
+        <article class="road-step reveal">
+          <span class="step-no">01</span>
+          <p>THE AWAKENING</p>
+          <h3>BUILD</h3>
+          <span>Brand · Website · Socials · Community</span>
+        </article>
+        <article class="road-step reveal delay-1">
+          <span class="step-no">02</span>
+          <p>THE FIRST NIGHT</p>
+          <h3>LAUNCH</h3>
+          <span>Launch · Contract verification · DEX visibility</span>
+        </article>
+        <article class="road-step reveal delay-2">
+          <span class="step-no">03</span>
+          <p>THE NIGHT SHIFT</p>
+          <h3>GROW</h3>
+          <span>Memes · Creators · Community culture</span>
+        </article>
+        <article class="road-step reveal delay-3">
+          <span class="step-no">04</span>
+          <p>THE JUNGLE</p>
+          <h3>EXPAND</h3>
+          <span>More community · More creativity · New opportunities</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="community section-screen" id="community">
+      <div class="community-inner reveal">
+        <p class="eyebrow">04 — COMMUNITY</p>
+        <h2>THE MARKET<br>NEVER SLEEPS.</h2>
+        <p>Neither does Toddy.</p>
+        <div class="hero-actions">
+          <a class="btn btn-disabled" href="#" aria-disabled="true">X — COMING SOON</a>
+          <a class="btn btn-ghost btn-disabled" href="#" aria-disabled="true">TELEGRAM — COMING SOON</a>
+        </div>
+      </div>
+      <div class="giant-word">TODDY</div>
     </section>
   </main>
 
   <footer>
-    <div class="brand">TODDY<span>CAT</span></div>
-    <p>⚠️ $TODDY is a meme/community token. Crypto assets are highly volatile and may lose some or all of their value. No profit or return is guaranteed. Verify the official contract address before trading.</p>
+    <div class="footer-brand"><span>🐾</span> TODDY<span class="gold">CAT</span></div>
+    <p>⚠️ $TODDY is a meme/community token. Crypto assets are highly volatile and may lose some or all of their value. No profit or return is guaranteed.</p>
+    <span>THE ORIGINAL NIGHT TRADER</span>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
