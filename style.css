@@ -43,7 +43,7 @@ img{max-width:100%}
 .btn-disabled:hover{transform:none;background:transparent;color:var(--text)}
 
 /* SHARED — one continuous visual language */
-.section{position:relative;padding-top:112px;padding-bottom:112px;border-top:1px solid var(--line)}
+.section{position:relative;padding-top:78px;padding-bottom:78px;border-top:1px solid var(--line)}
 .section-label{font:500 11px "DM Mono",monospace;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .reveal.show{opacity:1;transform:none}
@@ -124,7 +124,7 @@ blockquote small{display:block;margin-top:8px;color:var(--gold);font:500 10px "D
 
 /* ROADMAP */
 .roadmap{background:radial-gradient(circle at 50% 45%,rgba(242,195,79,.045),transparent 34%)}
-.roadmap-line{position:relative;display:grid;grid-template-columns:repeat(4,1fr);margin-top:60px}
+.roadmap-line{position:relative;display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px}
 .roadmap-line:before{content:"";position:absolute;top:15px;left:7%;right:7%;height:1px;background:rgba(242,195,79,.55)}
 .road-step{position:relative;padding:0 15px;text-align:center}
 .road-step>span{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:30px;height:30px;margin:auto;border:1px solid var(--gold);border-radius:50%;background:var(--bg);color:var(--gold);font:500 9px "DM Mono",monospace}
@@ -133,8 +133,8 @@ blockquote small{display:block;margin-top:8px;color:var(--gold);font:500 10px "D
 .road-step small{display:block;color:var(--muted);font-size:12px;line-height:1.5}
 
 /* COMMUNITY — same panel/lighting treatment as the rest */
-.community{min-height:520px;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(4,10,6,.96),rgba(4,10,6,.55)),url("toddy-jungle.png") center/cover;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.community-inner{padding-top:110px;padding-bottom:110px}
+.community{min-height:440px;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(4,10,6,.96),rgba(4,10,6,.55)),url("toddy-jungle.png") center/cover;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.community-inner{padding-top:0;padding-bottom:0}
 .community h2{margin:18px 0;font-size:clamp(62px,7.2vw,108px);line-height:.86;letter-spacing:-.07em}
 .community h2 span{color:var(--gold)}
 .community p{margin:0;color:#c2c8bb;font-size:18px}
@@ -271,4 +271,10 @@ footer small{color:#687066;font:500 9px "DM Mono",monospace}
   .identity-card .btn{width:100%}
   .link-list{justify-content:flex-start}
   .link-list>*{width:100%;text-align:center}
+}
+
+/* DESKTOP SPACING PASS — keeps tablet/mobile layouts unchanged */
+@media (min-width:901px){
+  .section{padding-top:78px;padding-bottom:78px}
+  .community-inner{padding-top:0;padding-bottom:0}
 }
