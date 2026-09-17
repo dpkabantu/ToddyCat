@@ -1,9 +1,23 @@
-# Toddy Cat — Uniform Final Website
+# Toddy Cat — Final GitHub Pages Upload
 
-This version uses one consistent visual system across the entire site: dark jungle/night atmosphere, gold Toddy accents, glass panels, consistent borders, typography and spacing, with continuous scrolling.
+This is the pre-launch website package for Toddy Cat.
 
-Important:
-- The three approved images are preserved byte-for-byte: `toddy-cat.png`, `toddy-jungle.png`, `toddy-night-shift.png`.
-- Images are constrained inside responsive containers so they do not run outside the page viewport.
-- No real contract, market data, DexScreener pair, X account or Telegram link is invented.
-- Keep the existing `CNAME` file in the GitHub repository when uploading these files.
+## Files
+- `index.html` — website
+- `style.css` — design
+- `script.js` — animations/navigation
+- `toddy-cat.png` — main Toddy artwork
+- `toddy-jungle.png` — jungle artwork
+- `toddy-night-shift.png` — night-shift artwork
+- `CNAME` — custom domain (`toddycat.xyz`)
+
+## Important pre-launch notes
+- The website currently says **Launching on Robinhood Chain**, but no token has been launched yet.
+- Contract address, DexScreener and Pons trading links are intentionally marked **Coming Soon**.
+- Supply is intentionally marked **To Be Confirmed** until the exact launch configuration is finalized.
+- Telegram is live at **https://t.me/toddycatxyz** and is linked from the website.
+- Do not replace placeholders with invented addresses or links.
+- After launch, publish the verified contract address first, then activate the real DEXScreener/Pons/explorer links.
+
+## GitHub Pages
+Upload all files from this folder to the root of your `ToddyCat` repository. Do not upload the ZIP itself as the website files.

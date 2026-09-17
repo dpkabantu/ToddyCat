@@ -228,3 +228,47 @@ footer small{color:#687066;font:500 9px "DM Mono",monospace}
   html{scroll-behavior:auto}
   .reveal,.btn{transition:none}
 }
+
+
+/* IDENTITY + SAFETY */
+.identity-card,.safety-card,.official-links{
+  margin-top:22px;
+  border:1px solid var(--line-gold);
+  border-radius:14px;
+  background:linear-gradient(90deg,rgba(242,195,79,.065),rgba(11,18,13,.7));
+  box-shadow:0 18px 45px rgba(0,0,0,.12);
+}
+.identity-card,.official-links{
+  display:flex;align-items:center;justify-content:space-between;gap:25px;padding:20px 22px;
+}
+.identity-label{display:block;color:var(--gold);font:500 10px "DM Mono",monospace;letter-spacing:.12em}
+.identity-card h3{margin:7px 0 5px;font-size:17px}
+.identity-card p,.official-links p{max-width:720px;margin:0;color:var(--muted);font-size:11px;line-height:1.55}
+.how{background:linear-gradient(180deg,rgba(8,14,9,.94),rgba(7,10,8,.98))}
+.how-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:start;margin-top:18px}
+.how-copy h2{margin:0;font-size:clamp(58px,7vw,96px);line-height:.84;letter-spacing:-.07em}
+.how-copy h2 span{color:var(--gold)}
+.how-copy p{max-width:430px;margin:22px 0 0;color:var(--muted);font-size:16px;line-height:1.7}
+.how-steps{display:grid;gap:10px}
+.how-step{display:grid;grid-template-columns:38px 1fr;column-gap:15px;padding:18px 20px;border:1px solid var(--line);border-radius:13px;background:var(--panel)}
+.how-step b{grid-row:span 2;color:var(--gold);font:500 10px "DM Mono",monospace}
+.how-step strong{font-size:14px}
+.how-step span{margin-top:5px;color:var(--muted);font-size:11px;line-height:1.5}
+.safety-card{padding:20px 22px}
+.safety-card strong{display:block;margin:8px 0 6px;font-size:15px}
+.safety-card p{margin:0;color:var(--muted);font-size:11px;line-height:1.6}
+.official-links{margin-top:12px}
+.link-list{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;max-width:720px}
+.link-list>*{padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:#c5cabd;font:500 9px "DM Mono",monospace;letter-spacing:.04em}
+.link-list a:hover{border-color:var(--line-gold);color:var(--gold)}
+.social-disabled{opacity:.6;cursor:default}
+
+@media(max-width:900px){
+  .how-grid{grid-template-columns:1fr;gap:30px}
+}
+@media(max-width:560px){
+  .identity-card,.official-links{flex-direction:column;align-items:flex-start}
+  .identity-card .btn{width:100%}
+  .link-list{justify-content:flex-start}
+  .link-list>*{width:100%;text-align:center}
+}
