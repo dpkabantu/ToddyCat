@@ -1,12 +1,9 @@
-# Toddy Cat — Rebuild
+TODDY CAT — NIGHT SHIFT WEBSITE
 
-Upload all files in this folder to the root of the GitHub Pages repository.
+Upload the contents of this folder to the root of your GitHub Pages repository. Keep index.html and all PNG assets together in the same directory.
 
-- `index.html` — complete redesigned site (CSS/JS embedded; no external CSS/JS required)
-- `toddy-cat.png`
-- `toddy-jungle.png`
-- `toddy-night-shift.png`
+Included: responsive landing page, tightened desktop/tablet/mobile spacing, distinct hero/story/Meme Factory artwork, Telegram meme-submission CTA, and honest pre-launch token placeholders.
 
-Keep `CNAME` from your existing repository containing `toddycat.xyz`.
+Meme submissions currently go to the Toddy Cat Telegram community; this is not an automated website upload or gallery publishing backend. Review submissions before featuring them.
 
-Important: token supply and contract are intentionally shown as **TO BE CONFIRMED / COMING SOON** until the actual launch configuration is finalized.
+Before launch, replace any TBC/Coming Soon token details only with verified official information.
