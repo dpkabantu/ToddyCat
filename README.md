@@ -1,9 +1,7 @@
-TODDY CAT — NIGHT SHIFT WEBSITE
+TODDY CAT WEBSITE — GITHUB PAGES UPLOAD
 
-Upload the contents of this folder to the root of your GitHub Pages repository. Keep index.html and all PNG assets together in the same directory.
+Upload index.html and every PNG asset in this folder to the root of your GitHub Pages repository. Keep filenames exactly as provided.
 
-Included: responsive landing page, tightened desktop/tablet/mobile spacing, distinct hero/story/Meme Factory artwork, Telegram meme-submission CTA, and honest pre-launch token placeholders.
+This update finalizes the HOME/HERO area only: rainforest backdrop, tighter brush-style headline, concise copy, no top-right Enter the Jungle button, and X + Telegram links. The Story and remaining sections are retained and were not redesigned in this pass.
 
-Meme submissions currently go to the Toddy Cat Telegram community; this is not an automated website upload or gallery publishing backend. Review submissions before featuring them.
-
-Before launch, replace any TBC/Coming Soon token details only with verified official information.
+Pre-launch details remain TBC/Coming Soon; do not replace with unverified contract or market data. Meme submissions route to the official Telegram community; there is no automatic upload backend.
