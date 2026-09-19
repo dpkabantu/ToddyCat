@@ -1,13 +1,15 @@
-TODDY CAT — VERIFIED INDIVIDUAL GITHUB PAGES FILES
+TODDY CAT — FINAL GITHUB PAGES UPLOAD (HOME PAGE)
 
-Upload/replace these files in the repository root (same folder as index.html).
+This is the finalized upload set for the approved Home-page direction. It retains the existing Story, Night Shift, token, safety, journey and community sections. The Meme Factory section and its navigation item are removed, as discussed.
 
-REPLACE: index.html
-REPLACE: toddy_cat_the_original_night_trader.png (hero)
-KEEP/UPLOAD: toddy-rainforest-night.png (Story)
-KEEP/UPLOAD: toddy-night-shift.png (Night Shift feature; not reused in Meme Factory)
-KEEP/UPLOAD: toddy-jungle.png (Meme Factory card 1)
-KEEP/UPLOAD: toddy-meme-factory.png (Meme Factory card 2)
-KEEP/UPLOAD: toddy-cat.png (favicon / social preview)
+UPLOAD / REPLACE these files in the GitHub Pages repository root (same folder):
+• index.html
+• toddy-hero-bg.jpg — dedicated moonlit jungle hero background
+• toddy_cat_the_original_night_trader.png — circular hero emblem
+• toddy-rainforest-night.png — Story section artwork
+• toddy-night-shift.png — Night Shift artwork
+• toddy-cat.png — favicon / social preview
 
-The third Meme Factory tile is intentionally typography-only, avoiding reuse of an artwork image. Keep filenames exactly as shown. Commit and hard-refresh after GitHub Pages deploys.
+Keep filenames exactly as shown. The HTML references these local assets. No Discord or YouTube links remain; X and Telegram are in the header. The duplicate top-right Enter the Jungle button is removed; the hero retains Enter the Jungle and Our Story.
+
+To publish: upload/replace all six files at the repository root, commit the changes, wait for GitHub Pages to deploy, then hard-refresh toddycat.xyz. The site has not been published by this package creation.
