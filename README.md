@@ -1,23 +1,31 @@
-# Toddy Cat — Final GitHub Pages Upload
+# Toddy Cat V3 — GitHub Pages
 
-This is the pre-launch website package for Toddy Cat.
+A full redesign of the Toddy Cat pre-launch website, built as an editorial/storytelling experience rather than a conventional crypto landing page.
 
-## Files
-- `index.html` — website
-- `style.css` — design
-- `script.js` — animations/navigation
-- `toddy-cat.png` — main Toddy artwork
+## Included
+- `index.html` — V3 website
+- `style.css` — V3 design system and responsive layout
+- `script.js` — scroll reveals, mobile navigation, cursor effect
+- `toddy-cat.png` — Toddy portrait
 - `toddy-jungle.png` — jungle artwork
 - `toddy-night-shift.png` — night-shift artwork
-- `CNAME` — custom domain (`toddycat.xyz`)
+- `CNAME` — `toddycat.xyz`
 
-## Important pre-launch notes
-- The website currently says **Launching on Robinhood Chain**, but no token has been launched yet.
-- Contract address, DexScreener and Pons trading links are intentionally marked **Coming Soon**.
-- Supply is intentionally marked **To Be Confirmed** until the exact launch configuration is finalized.
-- Telegram is live at **https://t.me/toddycatxyz** and is linked from the website.
-- Do not replace placeholders with invented addresses or links.
-- After launch, publish the verified contract address first, then activate the real DEXScreener/Pons/explorer links.
+## Official links
+- Website: https://toddycat.xyz/
+- X: https://x.com/toddycatxyz
+- Telegram: https://t.me/toddycatxyz
 
-## GitHub Pages
-Upload all files from this folder to the root of your `ToddyCat` repository. Do not upload the ZIP itself as the website files.
+## Pre-launch information intentionally preserved
+- Launching on Robinhood Chain
+- Contract: Coming Soon
+- Supply: To Be Confirmed
+- DexScreener: Coming Soon
+- Pons: Coming Soon
+- Explorer: Coming Soon
+- Price/market cap/liquidity/volume: not displayed until real on-chain data exists
+
+## Important
+Do not invent or replace placeholder contract/trading data. After launch, update the official contract address first and then activate verified DEX/explorer links.
+
+Upload all files to the root of the `ToddyCat` GitHub repository. Do not upload the ZIP itself.
