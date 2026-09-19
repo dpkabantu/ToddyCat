@@ -1,31 +1,12 @@
-# Toddy Cat V3 — GitHub Pages
+# Toddy Cat — Rebuild
 
-A full redesign of the Toddy Cat pre-launch website, built as an editorial/storytelling experience rather than a conventional crypto landing page.
+Upload all files in this folder to the root of the GitHub Pages repository.
 
-## Included
-- `index.html` — V3 website
-- `style.css` — V3 design system and responsive layout
-- `script.js` — scroll reveals, mobile navigation, cursor effect
-- `toddy-cat.png` — Toddy portrait
-- `toddy-jungle.png` — jungle artwork
-- `toddy-night-shift.png` — night-shift artwork
-- `CNAME` — `toddycat.xyz`
+- `index.html` — complete redesigned site (CSS/JS embedded; no external CSS/JS required)
+- `toddy-cat.png`
+- `toddy-jungle.png`
+- `toddy-night-shift.png`
 
-## Official links
-- Website: https://toddycat.xyz/
-- X: https://x.com/toddycatxyz
-- Telegram: https://t.me/toddycatxyz
+Keep `CNAME` from your existing repository containing `toddycat.xyz`.
 
-## Pre-launch information intentionally preserved
-- Launching on Robinhood Chain
-- Contract: Coming Soon
-- Supply: To Be Confirmed
-- DexScreener: Coming Soon
-- Pons: Coming Soon
-- Explorer: Coming Soon
-- Price/market cap/liquidity/volume: not displayed until real on-chain data exists
-
-## Important
-Do not invent or replace placeholder contract/trading data. After launch, update the official contract address first and then activate verified DEX/explorer links.
-
-Upload all files to the root of the `ToddyCat` GitHub repository. Do not upload the ZIP itself.
+Important: token supply and contract are intentionally shown as **TO BE CONFIRMED / COMING SOON** until the actual launch configuration is finalized.
