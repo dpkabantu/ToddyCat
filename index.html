@@ -487,6 +487,74 @@ html{scroll-padding-top:78px}
 }
 </style>
 
+
+<style id="toddy-home-final-correction-v2">
+/* Force exactly TWO headline rows: inner word spans must not become block rows. */
+.hero-copy .hero-display{
+  display:block!important;
+  white-space:normal!important;
+  font-family:'Bangers',Impact,sans-serif!important;
+  font-weight:400!important;
+  line-height:1.02!important;
+  letter-spacing:0!important;
+  gap:0!important;
+}
+.hero-copy .hero-display .hero-line-one,
+.hero-copy .hero-display .hero-line-two{
+  display:block!important;
+  width:max-content!important;
+  max-width:100%!important;
+  white-space:nowrap!important;
+  line-height:1.02!important;
+}
+.hero-copy .hero-display .hero-world,
+.hero-copy .hero-display .hero-sleeps,
+.hero-copy .hero-display .hero-toddy,
+.hero-copy .hero-display .hero-trades{
+  display:inline!important;
+  white-space:nowrap!important;
+}
+.hero-copy .hero-display .hero-toddy,
+.hero-copy .hero-display .hero-trades{
+  display:inline-block!important;
+}
+
+/* Reveal the source video's top-right moon: no artificial zoom or vertical offset. */
+.hero-video-bg{
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:50% 0%!important;
+  transform:none!important;
+}
+.hero:before{
+  background:
+    linear-gradient(90deg,rgba(0,4,7,.48) 0%,rgba(0,5,8,.28) 42%,rgba(0,5,8,.08) 78%,rgba(0,5,8,.05) 100%),
+    linear-gradient(0deg,rgba(0,4,7,.16) 0%,rgba(0,4,7,.03) 60%,rgba(0,4,7,.06) 100%)!important;
+}
+
+/* Compact header-to-kicker spacing and keep the navigation visible on mobile. */
+@media(max-width:900px){
+  .hero{padding:24px 6vw 40px!important;min-height:0!important}
+  .hero-video-bg{object-position:84% 0%!important}
+  .hero-copy .hero-display{font-size:clamp(36px,7.8vw,72px)!important}
+}
+@media(max-width:560px){
+  .hero{padding:18px 20px 32px!important;min-height:0!important}
+  .hero-copy .hero-title-tag{margin:0 0 12px!important}
+  .hero-copy .hero-display{
+    font-size:clamp(25px,7.1vw,42px)!important;
+    line-height:1.06!important;
+    margin:0 0 16px!important;
+    letter-spacing:0!important;
+  }
+  .hero-copy .hero-display .hero-line-one,
+  .hero-copy .hero-display .hero-line-two{line-height:1.06!important}
+  .hero-video-bg{object-position:88% 0%!important}
+}
+</style>
+
 </head>
 <body>
 <div class="grain"></div>
