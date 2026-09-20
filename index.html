@@ -353,309 +353,89 @@ html{scroll-padding-top:78px}
 </style>
 
 
-<style id="toddy-home-final-fixes">
-/* HOME headline: restore a bold, filled Bangers treatment and hold to two lines. */
-.hero-copy .hero-display{
-  display:flex!important;
-  flex-direction:column!important;
-  align-items:flex-start!important;
-  gap:.22em!important;
-  margin:0 0 22px!important;
-  font-family:'Bangers',Impact,sans-serif!important;
-  font-weight:400!important;
-  font-size:clamp(64px,7.2vw,112px)!important;
-  line-height:.98!important;
-  letter-spacing:.005em!important;
-  color:#f5f3eb!important;
-  -webkit-text-fill-color:#f5f3eb!important;
-  -webkit-text-stroke:0!important;
-  text-shadow:2px 3px 0 rgba(0,0,0,.32)!important;
-  filter:none!important;
-  transform:skew(-2deg);
-}
-.hero-copy .hero-line{
-  display:block!important;
-  width:max-content!important;
-  max-width:100%!important;
-  white-space:nowrap!important;
-  line-height:1!important;
-}
-.hero-copy .hero-line-one,
-.hero-copy .hero-line-two{margin:0!important}
-.hero-copy .hero-world,
-.hero-copy .hero-sleeps{
-  color:#f5f3eb!important;
-  -webkit-text-fill-color:#f5f3eb!important;
-  -webkit-text-stroke:0!important;
-  text-shadow:2px 3px 0 rgba(0,0,0,.32)!important;
-}
-.hero-copy .hero-toddy{
-  color:#dfff20!important;
-  -webkit-text-fill-color:#dfff20!important;
-  -webkit-text-stroke:0!important;
-  font-size:1.08em!important;
-  text-shadow:0 0 18px rgba(217,255,40,.12),2px 3px 0 rgba(0,0,0,.32)!important;
-}
-.hero-copy .hero-trades{
-  color:#f5f3eb!important;
-  -webkit-text-fill-color:#f5f3eb!important;
-  -webkit-text-stroke:0!important;
-  font-size:.88em!important;
-  margin-left:.12em!important;
-  text-shadow:2px 3px 0 rgba(0,0,0,.32)!important;
-}
-
-/* Keep the video as the only Home hero background; shift its framing down slightly
-   so the moon has breathing room near the top edge. Do not add a forest image. */
+<style id="toddy-mobile-header-and-hero-framing-fix">
+/* Keep the existing desktop layout and copy. Prevent the fixed header from covering the video’s top edge. */
 .hero-video-bg{
-  position:absolute!important;
-  top:3%!important;
-  right:0!important;
+  top:76px!important;
   bottom:auto!important;
-  left:0!important;
-  width:100%!important;
-  height:105%!important;
+  height:calc(100% - 76px)!important;
   object-fit:cover!important;
-  object-position:center top!important;
-  transform:none!important;
-}
-.hero:before{
-  background:
-    linear-gradient(90deg,rgba(0,4,7,.58) 0%,rgba(0,5,8,.34) 42%,rgba(0,5,8,.12) 78%,rgba(0,5,8,.08) 100%),
-    linear-gradient(0deg,rgba(0,4,7,.20) 0%,rgba(0,4,7,.04) 60%,rgba(0,4,7,.06) 100%)!important;
+  object-position:50% 0%!important;
 }
 
-/* MOBILE HEADER: keep brand/socials on the first row and show page links beneath. */
+/* Restore the site navigation on tablet/mobile; compact it into two clean rows. */
 @media(max-width:900px){
   .nav{
-    height:auto!important;
-    min-height:64px!important;
-    flex-wrap:wrap!important;
-    align-items:center!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-rows:1fr 1fr!important;
+    align-content:center!important;
+    column-gap:12px!important;
     row-gap:0!important;
-    padding:10px 4vw 0!important;
+    height:92px!important;
+    min-height:92px!important;
+    padding:7px 4vw 5px!important;
   }
+  .nav .brand{grid-column:1;grid-row:1;min-width:0;white-space:nowrap}
   .nav nav{
     display:flex!important;
-    order:3!important;
-    flex:0 0 100%!important;
-    width:100%!important;
+    grid-column:1/-1!important;
+    grid-row:2!important;
     justify-content:center!important;
     align-items:center!important;
-    gap:clamp(14px,4vw,28px)!important;
-    padding:12px 0 13px!important;
-    margin:0!important;
+    gap:clamp(17px,5vw,34px)!important;
+    width:100%!important;
+    min-width:0!important;
+    overflow:visible!important;
   }
   .nav nav a{
     display:inline-flex!important;
+    visibility:visible!important;
     white-space:nowrap!important;
-    font-size:clamp(9px,2.6vw,12px)!important;
+    font-size:10px!important;
+    letter-spacing:.045em!important;
+    padding:5px 0!important;
   }
-  .nav-right{margin-left:auto!important}
-  .hero{
-    grid-template-columns:minmax(0,1fr)!important;
-    min-height:0!important;
-    padding:34px 6vw 42px!important;
-    align-items:start!important;
-  }
-  .hero-copy{align-self:start!important;max-width:100%!important}
-  .hero-video-bg{top:3%!important;height:105%!important;object-position:78% top!important}
-  .hero-copy .hero-display{font-size:clamp(44px,9.2vw,76px)!important;gap:.20em!important}
-}
-@media(max-width:560px){
-  .nav{padding:9px 14px 0!important}
-  .nav nav{gap:clamp(11px,3.6vw,20px)!important;padding:12px 0 13px!important}
-  .nav nav a{font-size:clamp(9px,2.8vw,11px)!important;letter-spacing:.02em!important}
-  .nav-right{gap:8px!important}
-  .nav-social{font-size:9px!important}
-  .hero{padding:24px 20px 34px!important;min-height:0!important}
-  .hero-copy .hero-title-tag{font-size:10px!important;letter-spacing:.18em!important;margin:0 0 14px!important}
-  .hero-copy .hero-display{
-    font-size:clamp(29px,7.8vw,43px)!important;
-    line-height:1!important;
-    gap:.24em!important;
-    letter-spacing:0!important;
-    margin:0 0 18px!important;
-  }
-  .hero-copy .hero-line{white-space:nowrap!important;max-width:100%!important}
-  .hero-copy .hero-toddy{font-size:1.08em!important}
-  .hero-copy .hero-trades{font-size:.88em!important;margin-left:.08em!important}
-  .hero-copy .hero-deck{font-size:15px!important;line-height:1.5!important;margin:18px 0 0!important;max-width:100%!important}
-  .hero-copy .hero-actions{display:flex!important;flex-wrap:wrap!important;gap:10px!important;margin-top:20px!important}
-  .hero-copy .hero-actions .btn{padding:13px 14px!important;font-size:10px!important}
-  .hero-video-bg{top:3%!important;height:105%!important;object-position:83% top!important}
-}
-</style>
-
-
-<style id="toddy-home-final-correction-v2">
-/* Force exactly TWO headline rows: inner word spans must not become block rows. */
-.hero-copy .hero-display{
-  display:block!important;
-  white-space:normal!important;
-  font-family:'Bangers',Impact,sans-serif!important;
-  font-weight:400!important;
-  line-height:1.02!important;
-  letter-spacing:0!important;
-  gap:0!important;
-}
-.hero-copy .hero-display .hero-line-one,
-.hero-copy .hero-display .hero-line-two{
-  display:block!important;
-  width:max-content!important;
-  max-width:100%!important;
-  white-space:nowrap!important;
-  line-height:1.02!important;
-}
-.hero-copy .hero-display .hero-world,
-.hero-copy .hero-display .hero-sleeps,
-.hero-copy .hero-display .hero-toddy,
-.hero-copy .hero-display .hero-trades{
-  display:inline!important;
-  white-space:nowrap!important;
-}
-.hero-copy .hero-display .hero-toddy,
-.hero-copy .hero-display .hero-trades{
-  display:inline-block!important;
-}
-
-/* Reveal the source video's top-right moon: no artificial zoom or vertical offset. */
-.hero-video-bg{
-  inset:0!important;
-  width:100%!important;
-  height:100%!important;
-  object-fit:cover!important;
-  object-position:50% 0%!important;
-  transform:none!important;
-}
-.hero:before{
-  background:
-    linear-gradient(90deg,rgba(0,4,7,.48) 0%,rgba(0,5,8,.28) 42%,rgba(0,5,8,.08) 78%,rgba(0,5,8,.05) 100%),
-    linear-gradient(0deg,rgba(0,4,7,.16) 0%,rgba(0,4,7,.03) 60%,rgba(0,4,7,.06) 100%)!important;
-}
-
-/* Compact header-to-kicker spacing and keep the navigation visible on mobile. */
-@media(max-width:900px){
-  .hero{padding:24px 6vw 40px!important;min-height:0!important}
-  .hero-video-bg{object-position:84% 0%!important}
-  .hero-copy .hero-display{font-size:clamp(36px,7.8vw,72px)!important}
-}
-@media(max-width:560px){
-  .hero{padding:18px 20px 32px!important;min-height:0!important}
-  .hero-copy .hero-title-tag{margin:0 0 12px!important}
-  .hero-copy .hero-display{
-    font-size:clamp(25px,7.1vw,42px)!important;
-    line-height:1.06!important;
-    margin:0 0 16px!important;
-    letter-spacing:0!important;
-  }
-  .hero-copy .hero-display .hero-line-one,
-  .hero-copy .hero-display .hero-line-two{line-height:1.06!important}
-  .hero-video-bg{object-position:88% 0%!important}
-}
-</style>
-
-
-<style id="toddy-home-layout-final-pass">
-/* Desktop: keep the established layout; align the video to its top edge
-   so the moon in the upper part of the source is less likely to be cropped. */
-@media (min-width: 901px){
-  #home.hero{
-    overflow:hidden!important;
-  }
-  #home .hero-video-bg{
-    inset:0!important;
-    width:100%!important;
-    height:100%!important;
-    object-fit:cover!important;
-    object-position:50% 0%!important;
-    transform:none!important;
-  }
-}
-
-/* Mobile/tablet: let the hero grow to fit its content. The prior fixed
-   viewport height + centered content + overflow clipping cut off the headline. */
-@media (max-width:900px){
-  #home.hero{
-    height:auto!important;
-    min-height:0!important;
-    padding:26px 6vw 42px!important;
-    align-items:start!important;
-    overflow:hidden!important;
-  }
-  #home .hero-copy{
-    width:100%!important;
-    max-width:100%!important;
-    min-width:0!important;
-    margin:0!important;
-    align-self:start!important;
-    transform:none!important;
-  }
-  #home .hero-title-tag{
-    margin:0 0 12px!important;
-  }
-  #home .hero-display{
-    display:block!important;
-    margin:0 0 18px!important;
-    line-height:1.04!important;
-    letter-spacing:0!important;
-    transform:skew(-2deg)!important;
-    font-size:clamp(34px,7.4vw,68px)!important;
-  }
-  #home .hero-display .hero-line-one,
-  #home .hero-display .hero-line-two{
-    display:block!important;
-    width:max-content!important;
-    max-width:100%!important;
-    white-space:nowrap!important;
-    line-height:1.04!important;
-  }
-  #home .hero-deck{
-    margin-top:0!important;
-  }
-  #home .hero-video-bg{
-    inset:0!important;
-    width:100%!important;
-    height:100%!important;
-    object-fit:cover!important;
-    object-position:82% 0%!important;
-    transform:none!important;
-  }
-}
-@media (max-width:560px){
-  #home.hero{
-    padding:22px 20px 34px!important;
-  }
-  #home .hero-title-tag{
-    font-size:11px!important;
-    letter-spacing:.16em!important;
-    margin-bottom:10px!important;
-  }
-  #home .hero-display{
-    font-size:clamp(28px,7.3vw,42px)!important;
-    line-height:1.08!important;
-    margin-bottom:16px!important;
-  }
-  #home .hero-display .hero-line-one,
-  #home .hero-display .hero-line-two{
-    line-height:1.08!important;
-  }
-  #home .hero-deck{
-    font-size:16px!important;
-    line-height:1.5!important;
-  }
-  #home .hero-actions{
+  .nav .nav-right{
     display:flex!important;
-    flex-wrap:wrap!important;
-    gap:12px!important;
-    margin-top:20px!important;
+    grid-column:2!important;
+    grid-row:1!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    gap:clamp(8px,2vw,16px)!important;
+    min-width:0!important;
   }
-  #home .hero-actions .btn{
-    max-width:100%!important;
+  .nav .nav-social{
+    display:inline-flex!important;
+    visibility:visible!important;
+    white-space:nowrap!important;
+    font-size:10px!important;
+    letter-spacing:0!important;
   }
-  #home .hero-video-bg{
-    object-position:86% 0%!important;
+  .nav .nav-right .nav-social:nth-child(2){font-size:0!important}
+  .nav .nav-right .nav-social:nth-child(2)::after{
+    content:'TG ↗';font:10px 'DM Mono',monospace;letter-spacing:0!important;
   }
+  .hero-video-bg{
+    top:92px!important;
+    height:calc(100% - 92px)!important;
+    object-position:50% 0%!important;
+  }
+}
+@media(max-width:560px){
+  .nav{height:88px!important;min-height:88px!important;padding:6px 14px 4px!important;column-gap:8px!important}
+  .nav .brand{font-size:12px!important;letter-spacing:.035em!important;gap:8px!important}
+  .nav .mark{width:27px!important;height:27px!important;flex:0 0 27px!important}
+  .nav nav{gap:clamp(13px,4.2vw,21px)!important}
+  .nav nav a{font-size:9px!important;letter-spacing:.025em!important}
+  .nav .nav-right{gap:9px!important}
+  .nav .nav-social,.nav .nav-right .nav-social:nth-child(2)::after{font-size:9px!important}
+  .hero-video-bg{top:88px!important;height:calc(100% - 88px)!important;object-position:50% 0%!important}
+}
+@media(max-width:350px){
+  .nav{padding-left:10px!important;padding-right:10px!important}
+  .nav nav{gap:11px!important}
+  .nav nav a{font-size:8px!important}
 }
 </style>
 
@@ -664,7 +444,7 @@ html{scroll-padding-top:78px}
 <div class="grain"></div>
 <header class="nav"><a class="brand" href="#top" aria-label="Toddy Cat home"><span class="mark">T</span><span>TODDY <i>CAT</i></span></a><nav><a class="nav-home" href="#top">HOME</a><a href="#story">STORY</a><a href="#shift">NIGHT SHIFT</a><a href="#token">$TODDY</a></nav><div class="nav-right"><a class="nav-social" href="https://x.com/toddycatxyz" target="_blank" rel="noopener" aria-label="Toddy Cat on X">X ↗</a><a class="nav-social" href="https://t.me/toddycatxyz" target="_blank" rel="noopener" aria-label="Toddy Cat on Telegram">TELEGRAM ↗</a></div></header>
 <main id="top">
-<section class="hero" id="home"><div class="hero-copy"><div class="hero-title-tag">THE ORIGINAL NIGHT TRADER</div><h1 class="hero-display"><span class="hero-line hero-line-one"><span class="hero-world">THE WORLD</span> <span class="hero-sleeps">SLEEPS.</span></span><span class="hero-line hero-line-two"><span class="hero-toddy">TODDY</span> <span class="hero-trades">TRADES.</span></span></h1><p class="hero-deck">Meet Toddy Cat — the jungle’s after-hours legend. Nocturnal by nature. Online by instinct.</p><div class="hero-actions"><a class="btn primary" href="#shift">ENTER THE JUNGLE <span aria-hidden="true">→</span></a><a class="btn story-cta" href="#story">OUR STORY <span aria-hidden="true">→</span></a></div></div><video class="hero-video-bg" autoplay muted loop playsinline preload="auto" aria-label="Toddy Cat hopping along a jungle branch"><source src="toddy-home-video.mp4" type="video/mp4">Your browser does not support HTML5 video.</video></section>
+<section class="hero" id="home"><div class="hero-copy"><div class="hero-title-tag">THE ORIGINAL NIGHT TRADER</div><h1 class="hero-display"><span class="hero-line hero-world">THE WORLD</span><span class="hero-line hero-sleeps">SLEEPS.</span><span class="hero-line hero-toddy">TODDY</span><span class="hero-line hero-trades">TRADES.</span></h1><p class="hero-deck">Meet Toddy Cat — the jungle’s after-hours legend. Nocturnal by nature. Online by instinct.</p><div class="hero-actions"><a class="btn primary" href="#shift">ENTER THE JUNGLE <span aria-hidden="true">→</span></a><a class="btn story-cta" href="#story">OUR STORY <span aria-hidden="true">→</span></a></div></div><video class="hero-video-bg" autoplay muted loop playsinline preload="auto" aria-label="Toddy Cat hopping along a jungle branch"><source src="toddy-home-video.mp4" type="video/mp4">Your browser does not support HTML5 video.</video></section>
 <div class="ticker"><div class="ticker-track"><b>THE WORLD SLEEPS. TODDY TRADES.</b><span>$TODDY</span><b>ONE JUNGLE · ONE COMMUNITY</b><span>NOCTURNAL</span><b>THE NIGHT SHIFT NEVER SLEEPS</b><b>VERIFY BEFORE YOU TRADE</b></div></div>
 <section class="section" id="story"><div class="section-head"><div class="num">01 / ORIGIN</div><h2 class="display">NOT JUST A CAT.<br><em>A TODDY.</em></h2></div><div class="creature"><img src="toddy-rainforest-night.png" alt="Asian palm civet beneath the moon in a misty tropical rainforest"><div class="creature-copy"><p class="lead">“Toddy Cat” is a traditional name for the Asian palm civet, a nocturnal mammal found across parts of Asia.</p><p>That is the starting point — not a random mascot. Toddy is curious, elusive and active after dark. The crypto character grows from the real animal instead of pretending it is something it isn't.</p><div class="facts"><div class="fact"><span>01</span><strong>NOCTURNAL</strong><small>Night is home.</small></div><div class="fact"><span>02</span><strong>ELUSIVE</strong><small>Moves quietly.</small></div><div class="fact"><span>03</span><strong>CURIOUS</strong><small>Always exploring.</small></div></div></div></div></section>
 <section class="section night" id="shift"><div class="section-head"><div class="num">02 / NIGHT SHIFT</div><h2 class="display">WHEN THE WORLD<br>GOES QUIET,<br><em>TODDY WAKES.</em></h2></div><figure class="night-feature"><img src="toddy-night-shift.png" alt="Toddy Cat at a glowing trading desk in the jungle at night"><figcaption>THE NIGHT SHIFT · CHARTS, COFFEE & CURIOSITY</figcaption></figure><div class="night-grid"><article class="night-card"><small>22:41 · THE WATCHER</small><h3>WATCH THE JUNGLE.</h3><p>Before the noise starts, Toddy watches. The community learns the character through stories, memes and late-night internet culture.</p></article><article class="night-card"><small>02:47 · THE TRADER</small><h3>STAY AWAKE.</h3><p>Charts don't sleep. Memes don't sleep. The Night Shift is for the people still online.</p></article><article class="night-card"><small>04:58 · THE WANDERER</small><h3>FOLLOW THE TRAIL.</h3><p>The jungle changes every night. Toddy's universe is meant to grow with community creativity.</p></article></div></section>
