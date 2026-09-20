@@ -352,6 +352,93 @@ html{scroll-padding-top:78px}
 }
 </style>
 
+
+<style id="toddy-mobile-header-and-hero-framing-fix">
+/* Keep the existing desktop layout and copy. Prevent the fixed header from covering the video’s top edge. */
+.hero-video-bg{
+  top:76px!important;
+  bottom:auto!important;
+  height:calc(100% - 76px)!important;
+  object-fit:cover!important;
+  object-position:50% 0%!important;
+}
+
+/* Restore the site navigation on tablet/mobile; compact it into two clean rows. */
+@media(max-width:900px){
+  .nav{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-rows:1fr 1fr!important;
+    align-content:center!important;
+    column-gap:12px!important;
+    row-gap:0!important;
+    height:92px!important;
+    min-height:92px!important;
+    padding:7px 4vw 5px!important;
+  }
+  .nav .brand{grid-column:1;grid-row:1;min-width:0;white-space:nowrap}
+  .nav nav{
+    display:flex!important;
+    grid-column:1/-1!important;
+    grid-row:2!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:clamp(17px,5vw,34px)!important;
+    width:100%!important;
+    min-width:0!important;
+    overflow:visible!important;
+  }
+  .nav nav a{
+    display:inline-flex!important;
+    visibility:visible!important;
+    white-space:nowrap!important;
+    font-size:10px!important;
+    letter-spacing:.045em!important;
+    padding:5px 0!important;
+  }
+  .nav .nav-right{
+    display:flex!important;
+    grid-column:2!important;
+    grid-row:1!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    gap:clamp(8px,2vw,16px)!important;
+    min-width:0!important;
+  }
+  .nav .nav-social{
+    display:inline-flex!important;
+    visibility:visible!important;
+    white-space:nowrap!important;
+    font-size:10px!important;
+    letter-spacing:0!important;
+  }
+  .nav .nav-right .nav-social:nth-child(2){font-size:0!important}
+  .nav .nav-right .nav-social:nth-child(2)::after{
+    content:'TG ↗';font:10px 'DM Mono',monospace;letter-spacing:0!important;
+  }
+  .hero-video-bg{
+    top:92px!important;
+    height:calc(100% - 92px)!important;
+    object-position:50% 0%!important;
+  }
+}
+@media(max-width:560px){
+  .nav{height:88px!important;min-height:88px!important;padding:6px 14px 4px!important;column-gap:8px!important}
+  .nav .brand{font-size:12px!important;letter-spacing:.035em!important;gap:8px!important}
+  .nav .mark{width:27px!important;height:27px!important;flex:0 0 27px!important}
+  .nav nav{gap:clamp(13px,4.2vw,21px)!important}
+  .nav nav a{font-size:9px!important;letter-spacing:.025em!important}
+  .nav .nav-right{gap:9px!important}
+  .nav .nav-social,.nav .nav-right .nav-social:nth-child(2)::after{font-size:9px!important}
+  .hero-video-bg{top:88px!important;height:calc(100% - 88px)!important;object-position:50% 0%!important}
+}
+@media(max-width:350px){
+  .nav{padding-left:10px!important;padding-right:10px!important}
+  .nav nav{gap:11px!important}
+  .nav nav a{font-size:8px!important}
+}
+</style>
+
 </head>
 <body>
 <div class="grain"></div>
