@@ -1,15 +1,14 @@
-TODDY CAT — FINAL GITHUB PAGES UPLOAD (HOME PAGE)
+TODDY CAT — HOME PAGE BRANCH-HOP UPDATE
 
-This is the finalized upload set for the approved Home-page direction. It retains the existing Story, Night Shift, token, safety, journey and community sections. The Meme Factory section and its navigation item are removed, as discussed.
+This is a HOME-ONLY update to the existing site. It adds a separate Toddy Cat character image that moves forward and backward along a stylized jungle branch. The existing Story, Night Shift, token, and all other sections/content are retained.
 
-UPLOAD / REPLACE these files in the GitHub Pages repository root (same folder):
-• index.html
-• toddy-hero-bg.jpg — dedicated moonlit jungle hero background
-• toddy_cat_the_original_night_trader.png — circular hero emblem
-• toddy-rainforest-night.png — Story section artwork
-• toddy-night-shift.png — Night Shift artwork
-• toddy-cat.png — favicon / social preview
+UPLOAD ONLY THESE TWO FILES to the same GitHub Pages root as your existing website:
+1. index.html (replace the current index.html)
+2. toddy-branch-hop.png (add this new image)
 
-Keep filenames exactly as shown. The HTML references these local assets. No Discord or YouTube links remain; X and Telegram are in the header. The duplicate top-right Enter the Jungle button is removed; the hero retains Enter the Jungle and Our Story.
-
-To publish: upload/replace all six files at the repository root, commit the changes, wait for GitHub Pages to deploy, then hard-refresh toddycat.xyz. The site has not been published by this package creation.
+IMPORTANT:
+- Keep your existing site assets in place, especially toddy-hero-bg.jpg and other images already used by the page.
+- Do not delete or rename your existing images.
+- The cat animation is independent of the logo/emblem. It travels and hops along the branch, then turns and returns.
+- The animation respects the visitor’s reduced-motion accessibility setting.
+- This update does not change the Story or any other page/section.
