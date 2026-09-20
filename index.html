@@ -26,38 +26,42 @@
 @keyframes heroFloat{0%,100%{transform:translateY(0) rotate(-.5deg)}50%{transform:translateY(-12px) rotate(.5deg)}}@keyframes aurora{from{opacity:.55;transform:translate3d(-1%,0,0)}to{opacity:1;transform:translate3d(1%,1%,0)}}@keyframes riseIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 
-/* HOME ONLY — independent Toddy Cat branch-hop animation */
-.hero-art{isolation:isolate;overflow:hidden;min-height:clamp(360px,42vw,590px)}
-.hero-art .orb{z-index:-1;pointer-events:none}
-.branch-hop-stage{position:absolute;inset:7% 0 4%;overflow:hidden;isolation:isolate}
-.hop-branch{position:absolute;z-index:1;left:-5%;right:-7%;top:63%;height:clamp(22px,3vw,42px);border-radius:55% 35% 18% 22%;transform:rotate(-4deg);background:linear-gradient(180deg,#50652b 0%,#263b1b 17%,#171b12 48%,#080b08 100%);box-shadow:0 9px 13px rgba(0,0,0,.65),inset 0 3px 2px rgba(190,218,92,.34),inset 0 -5px 6px rgba(0,0,0,.7)}
-.hop-branch:before{content:"";position:absolute;inset:3px 0 auto;height:5px;border-radius:50%;background:repeating-linear-gradient(95deg,rgba(204,227,115,.0) 0 13px,rgba(204,227,115,.42) 14px 17px,transparent 18px 29px);opacity:.7}
-.hop-branch i{position:absolute;top:-7px;width:17px;height:9px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#a3c74b,#34541c);transform:rotate(-22deg);box-shadow:0 2px 5px #071007}
+/* HOME ONLY — natural animal hop animation (isolated to Toddy, not the scene) */
+.hero-art{isolation:isolate;overflow:hidden;min-height:clamp(360px,42vw,590px);background:radial-gradient(ellipse at 52% 46%,rgba(28,61,31,.34),transparent 65%)}
+/* Retire the old orbit/ring graphic; the branch is now the only stage prop. */
+.hero-art>.orb{display:none!important}
+.hero-art>.branch-hop-stage{position:absolute!important;inset:5% 0 2%;overflow:hidden;isolation:isolate}
+.hop-branch{position:absolute;z-index:1;left:-7%;right:-8%;top:70%;height:clamp(22px,3.1vw,42px);border-radius:48% 25% 22% 16%;transform:rotate(-3deg);background:linear-gradient(180deg,#53633b 0%,#344323 13%,#241f17 30%,#17140f 72%,#080907 100%);box-shadow:0 13px 19px rgba(0,0,0,.65),inset 0 3px 3px rgba(183,204,112,.25),inset 0 -6px 8px rgba(0,0,0,.72)}
+.hop-branch:before{content:"";position:absolute;left:0;right:0;top:3px;height:3px;border-radius:50%;background:linear-gradient(90deg,transparent,rgba(180,202,116,.55) 18%,rgba(104,130,58,.45) 48%,rgba(190,207,126,.4) 78%,transparent)}
+.hop-branch:after{content:"";position:absolute;inset:8px 3% 4px;background:repeating-linear-gradient(8deg,transparent 0 17px,rgba(5,7,4,.32) 18px 20px,transparent 21px 35px);opacity:.65}
+.hop-branch i{position:absolute;z-index:2;top:-8px;width:19px;height:10px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#9ab85b,#30451d);transform:rotate(-22deg);box-shadow:0 2px 5px #071007}
 .hop-branch i:nth-child(1){left:12%}.hop-branch i:nth-child(2){left:31%;top:-10px;transform:rotate(28deg)}.hop-branch i:nth-child(3){left:53%}.hop-branch i:nth-child(4){left:74%;top:-9px;transform:rotate(30deg)}.hop-branch i:nth-child(5){left:91%}
-.branch-cat{position:absolute!important;z-index:3;left:4%;top:calc(63% - clamp(92px,12vw,155px));width:clamp(145px,23vw,290px)!important;max-width:none!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;border-radius:0!important;mix-blend-mode:normal!important;filter:drop-shadow(0 8px 12px rgba(0,0,0,.55))!important;transform-origin:50% 90%;animation:toddyBranchTraverse 6.2s cubic-bezier(.45,0,.55,1) infinite;will-change:transform}
-@keyframes toddyBranchTraverse{
-  0%,100%{transform:translate3d(0,0,0) scaleX(1) rotate(0)}
-  12%{transform:translate3d(7vw,-7vh,0) scaleX(1) rotate(-7deg)}
-  25%{transform:translate3d(15vw,0,0) scaleX(1) rotate(1deg)}
-  38%{transform:translate3d(27vw,-6vh,0) scaleX(1) rotate(-5deg)}
-  49%{transform:translate3d(34vw,0,0) scaleX(1) rotate(0)}
-  50%{transform:translate3d(34vw,0,0) scaleX(-1) rotate(0)}
-  62%{transform:translate3d(27vw,-7vh,0) scaleX(-1) rotate(-7deg)}
-  75%{transform:translate3d(15vw,0,0) scaleX(-1) rotate(1deg)}
-  88%{transform:translate3d(5vw,-6vh,0) scaleX(-1) rotate(-5deg)}
+.hop-traveler{position:absolute!important;z-index:3;left:4%;bottom:30%;width:clamp(170px,25vw,310px);height:auto;line-height:0;transform-origin:center bottom;animation:branchBackForth 8.8s ease-in-out infinite;will-change:transform}
+.hop-traveler img{display:block;width:100%;height:auto;max-width:none;position:relative;z-index:3;mix-blend-mode:normal;filter:drop-shadow(0 8px 9px rgba(0,0,0,.6));animation:none!important;transform:none!important}
+@keyframes branchBackForth{
+  0%,9%{transform:translateX(0) scaleX(1)}
+  43%{transform:translateX(92%) scaleX(1)}
+  47%,51%{transform:translateX(92%) scaleX(-1)}
+  86%{transform:translateX(0) scaleX(-1)}
+  91%,100%{transform:translateX(0) scaleX(1)}
 }
-.hero-art img.branch-cat{animation:toddyBranchTraverse 6.2s cubic-bezier(.45,0,.55,1) infinite}
-@media(max-width:900px){.hero-art{min-height:clamp(330px,74vw,480px)}.branch-hop-stage{inset:3% 0 3%}.hero-art img.branch-cat{width:clamp(140px,32vw,250px)!important;top:calc(63% - clamp(88px,18vw,135px));left:1%;animation:toddyBranchTraverse 6.2s cubic-bezier(.45,0,.55,1) infinite}}
-@media(max-width:560px){.hero-art{min-height:clamp(270px,78vw,360px);margin-top:8px}.branch-hop-stage{inset:2% -2% 2%}.hop-branch{top:63%;height:22px}.hero-art img.branch-cat{width:clamp(126px,38vw,190px)!important;top:calc(63% - 88px);left:0;animation-duration:6.8s}}
-@media(prefers-reduced-motion:reduce){.branch-cat{animation:none!important;transform:none!important;left:8%;will-change:auto}}
-
+@media(max-width:900px){.hero-art{min-height:clamp(330px,74vw,480px)}.branch-hop-stage{inset:3% 0 2%}.hop-traveler{width:clamp(150px,34vw,245px);left:3%;bottom:30%;animation-name:branchBackForthMobile}}
+@keyframes branchBackForthMobile{
+  0%,9%{transform:translateX(0) scaleX(1)}
+  43%{transform:translateX(62%) scaleX(1)}
+  47%,51%{transform:translateX(62%) scaleX(-1)}
+  86%{transform:translateX(0) scaleX(-1)}
+  91%,100%{transform:translateX(0) scaleX(1)}
+}
+@media(max-width:560px){.hero-art{min-height:clamp(270px,78vw,360px);margin-top:8px}.branch-hop-stage{inset:2% 0 2%}.hop-branch{top:70%;height:22px}.hop-traveler{width:clamp(132px,39vw,190px);left:2%;bottom:30%;animation-duration:9.2s}}
+@media(prefers-reduced-motion:reduce){.hop-traveler{animation:none!important;transform:none!important;left:24%;will-change:auto}}
 </style>
 </head>
 <body>
 <div class="grain"></div>
 <header class="nav"><a class="brand" href="#top"><span class="mark">T</span><span>TODDY <i>CAT</i></span></a><nav><a href="#story">STORY</a><a href="#shift">NIGHT SHIFT</a><a href="#token">$TODDY</a><a href="#factory">MEME FACTORY</a></nav><div class="nav-right"><a class="nav-social" href="https://x.com/toddycatxyz" target="_blank" rel="noopener">X ↗</a><a class="nav-social" href="https://t.me/toddycatxyz" target="_blank" rel="noopener">TG ↗</a><a class="enter" href="#token">ENTER THE JUNGLE ↓</a></div></header>
 <main id="top">
-<section class="hero"><canvas id="night-particles" aria-hidden="true"></canvas><div><div class="kicker">ROBINHOOD CHAIN · PRE-LAUNCH · EST. 2026</div><div class="hero-title-tag">THE ORIGINAL<br>NIGHT TRADER</div><h1 class="display">THE WORLD<span>SLEEPS.</span>TODDY TRADES.</h1><p class="hero-deck">Meet Toddy Cat: the jungle’s after-hours legend. Nocturnal by nature. Online by instinct. The Original Night Trader—built for late-night charts, unhinged memes, and community culture.</p><div class="hero-actions"><a class="btn primary" href="#story">START THE STORY ↓</a><a class="btn" href="https://t.me/toddycatxyz" target="_blank" rel="noopener">JOIN THE NIGHT SHIFT ↗</a></div><div class="hero-meta"><span><b>01</b> CREATURE</span><span><b>02</b> NIGHT SHIFT</span><span><b>03</b> MEME CULTURE</span></div></div><div class="hero-art"><div class="orb" aria-hidden="true"></div><div class="branch-hop-stage" aria-label="Toddy Cat hopping back and forth along a jungle branch"><div class="hop-branch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><img class="branch-cat" src="toddy-branch-hop.png" alt="Toddy Cat hopping along a branch"></div></div></section>
+<section class="hero"><canvas id="night-particles" aria-hidden="true"></canvas><div><div class="kicker">ROBINHOOD CHAIN · PRE-LAUNCH · EST. 2026</div><div class="hero-title-tag">THE ORIGINAL<br>NIGHT TRADER</div><h1 class="display">THE WORLD<span>SLEEPS.</span>TODDY TRADES.</h1><p class="hero-deck">Meet Toddy Cat: the jungle’s after-hours legend. Nocturnal by nature. Online by instinct. The Original Night Trader—built for late-night charts, unhinged memes, and community culture.</p><div class="hero-actions"><a class="btn primary" href="#story">START THE STORY ↓</a><a class="btn" href="https://t.me/toddycatxyz" target="_blank" rel="noopener">JOIN THE NIGHT SHIFT ↗</a></div></div><div class="hero-art"><div class="branch-hop-stage" aria-label="Toddy Cat naturally hopping back and forth along a jungle branch"><div class="hop-branch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="hop-traveler"><img src="toddy-branch-hop.webp" alt="Toddy Cat hopping along a branch"></div></div></div></section>
 <div class="ticker"><div class="ticker-track"><span>TODDY CAT</span><b>THE ORIGINAL NIGHT TRADER</b><span>$TODDY</span><b>ONE JUNGLE · ONE COMMUNITY</b><span>NOCTURNAL</span><b>THE NIGHT SHIFT NEVER SLEEPS</b><span>ASIAN PALM CIVET</span><b>VERIFY BEFORE YOU TRADE</b></div></div>
 <section class="section" id="story"><div class="section-head"><div class="num">01 / ORIGIN</div><h2 class="display">NOT JUST A CAT.<br><em>A TODDY.</em></h2></div><div class="creature"><img src="toddy-rainforest-night.png" alt="Asian palm civet beneath the moon in a misty tropical rainforest"><div class="creature-copy"><p class="lead">“Toddy Cat” is a traditional name for the Asian palm civet, a nocturnal mammal found across parts of Asia.</p><p>That is the starting point — not a random mascot. Toddy is curious, elusive and active after dark. The crypto character grows from the real animal instead of pretending it is something it isn't.</p><div class="facts"><div class="fact"><span>01</span><strong>NOCTURNAL</strong><small>Night is home.</small></div><div class="fact"><span>02</span><strong>ELUSIVE</strong><small>Moves quietly.</small></div><div class="fact"><span>03</span><strong>CURIOUS</strong><small>Always exploring.</small></div></div></div></div></section>
 <section class="section night" id="shift"><div class="section-head"><div class="num">02 / NIGHT SHIFT</div><h2 class="display">WHEN THE WORLD<br>GOES QUIET,<br><em>TODDY WAKES.</em></h2></div><div class="night-grid"><article class="night-card"><small>22:41 · THE WATCHER</small><h3>WATCH THE JUNGLE.</h3><p>Before the noise starts, Toddy watches. The community learns the character through stories, memes and late-night internet culture.</p></article><article class="night-card"><small>02:47 · THE TRADER</small><h3>STAY AWAKE.</h3><p>Charts don't sleep. Memes don't sleep. The Night Shift is for the people still online.</p></article><article class="night-card"><small>04:58 · THE WANDERER</small><h3>FOLLOW THE TRAIL.</h3><p>The jungle changes every night. Toddy's universe is meant to grow with community creativity.</p></article></div></section>
